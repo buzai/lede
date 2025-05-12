@@ -28,6 +28,14 @@ define Build/ravpower-wd009-factory
 	@mv $@.new $@
 endef
 
+define Device/mydevice
+  DTS := mt7628an_mydevice
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := MyBrand
+  DEVICE_MODEL := MyDevice
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-gpio-button-hotplug wpad-basic-mbedtls luci
+endef
+TARGET_DEVICES += mydevice
 
 define Device/alfa-network_awusfree1
   IMAGE_SIZE := 7872k
