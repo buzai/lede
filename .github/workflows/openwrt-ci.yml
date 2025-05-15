@@ -1,4 +1,4 @@
-# 
+#
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 # Copyright (C) 2019 P3TERX
@@ -8,12 +8,10 @@
 name: OpenWrt-CI
 
 on:
-  workflow_dispatch:  # 👈 加这一行，允许手动触发
-  schedule:
-    - cron: 0 20 * * *
+  workflow_dispatch: # 手动触发，方便调试
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
 
